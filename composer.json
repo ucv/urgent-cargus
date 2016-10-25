@@ -1,5 +1,5 @@
 {
-  "name": "mnib/urgentcargus",
+  "name": "mnib/urgentcargus-php",
   "type": "library",
   "require": {
     "php": "^5.5|^7.0",
