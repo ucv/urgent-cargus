@@ -43,7 +43,7 @@ class Client
     public function __construct($apiKey, $apiUri = null)
     {
         if (!$apiKey) {
-            throw new \RuntimeException('The UrgentCargus API needs a subscription key.');
+            throw new \InvalidArgumentException('The UrgentCargus API needs a subscription key.');
         }
 
         $this->apiKey = $apiKey;
