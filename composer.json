@@ -1,0 +1,13 @@
+{
+  "name": "mnib/urgentcargus",
+  "type": "library",
+  "require": {
+    "php": "^5.5|^7.0",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "MNIB\\UrgentCargus\\": "src/UrgentCargus/"
+    }
+  }
+}
