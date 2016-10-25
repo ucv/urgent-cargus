@@ -1,6 +1,7 @@
 {
   "name": "mnib/urgentcargus-php",
   "type": "library",
+  "minimum-stability": "stable",
   "require": {
     "php": "^5.5|^7.0",
     "guzzlehttp/guzzle": "^6.2"
