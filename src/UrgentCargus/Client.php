@@ -91,9 +91,9 @@ class Client
     /**
      * Shorthand for GET request
      *
-     * @param $endpoint
+     * @param string $endpoint
      * @param array $params
-     * @param null $token
+     * @param null|string $token
      * @return mixed
      */
     public function get($endpoint, array $params = [], $token = null)
@@ -104,9 +104,9 @@ class Client
     /**
      * Shorthand for POST request
      *
-     * @param $endpoint
+     * @param string $endpoint
      * @param array $params
-     * @param null $token
+     * @param null|string $token
      * @return mixed
      */
     public function post($endpoint, array $params = [], $token = null)
@@ -117,9 +117,9 @@ class Client
     /**
      * Shorthand for PUT request
      *
-     * @param $endpoint
+     * @param string $endpoint
      * @param array $params
-     * @param null $token
+     * @param null|string $token
      * @return mixed
      */
     public function put($endpoint, array $params = [], $token = null)
@@ -130,9 +130,9 @@ class Client
     /**
      * Shorthand for DELETE request
      *
-     * @param $endpoint
+     * @param string $endpoint
      * @param array $params
-     * @param null $token
+     * @param null|string $token
      * @return mixed
      */
     public function delete($endpoint, array $params = [], $token = null)
