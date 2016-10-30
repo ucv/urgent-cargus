@@ -2,13 +2,15 @@
 namespace MNIB\UrgentCargus;
 
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\HandlerStack;
+use MNIB\UrgentCargus\Guzzle\MiddlewareFactory;
 
 class Client
 {
     /**
      * Library version
      */
-    const VERSION = '0.0.1';
+    const VERSION = '0.2';
 
     /**
      * Default API Uri
@@ -49,7 +51,11 @@ class Client
         $this->apiKey = $apiKey;
         $this->apiUri = $apiUri ?: self::API_URI;
 
+        $handlerStack = HandlerStack::create();
+        $handlerStack->push(MiddlewareFactory::retry());
+
         $this->httpClient = new HttpClient([
+            'handler' => $handlerStack,
             'base_uri' => $this->apiUri,
             'timeout' => 10,
             'allow_redirects' => false,
