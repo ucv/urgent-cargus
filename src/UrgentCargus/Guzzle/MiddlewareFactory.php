@@ -22,8 +22,8 @@ class MiddlewareFactory
             Response $response = null,
             RequestException $exception = null
         ) {
-            // Limit the number of retries to 5
-            if ($retries >= 5) {
+            // Limit the number of retries to 3
+            if ($retries >= 3) {
                 return false;
             }
 
@@ -50,7 +50,7 @@ class MiddlewareFactory
     private static function retryDelay()
     {
         return function ($retries) {
-            return (int)2000 * $retries;
+            return (int)200 * $retries;
         };
     }
 }

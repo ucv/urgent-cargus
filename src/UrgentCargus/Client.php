@@ -51,11 +51,11 @@ class Client
         $this->apiKey = $apiKey;
         $this->apiUri = $apiUri ?: self::API_URI;
 
-        $handlerStack = HandlerStack::create();
-        $handlerStack->push(MiddlewareFactory::retry());
+        $stack = HandlerStack::create();
+        $stack->push(MiddlewareFactory::retry());
 
         $this->httpClient = new HttpClient([
-            'handler' => $handlerStack,
+            'handler' => $stack,
             'base_uri' => $this->apiUri,
             'timeout' => 10,
             'allow_redirects' => false,
