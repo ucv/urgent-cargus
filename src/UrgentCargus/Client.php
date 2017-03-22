@@ -139,4 +139,19 @@ class Client
     {
         return $this->request('DELETE', $endpoint, $params, $token);
     }
+
+    /**
+     * Get token from service
+     *
+     * @param $username
+     * @param $password
+     * @return string
+     */
+    public function getToken($username, $password)
+    {
+        return $this->post('LoginUser', [
+            'UserName' => $username,
+            'Password' => $password
+        ]);
+    }
 }
