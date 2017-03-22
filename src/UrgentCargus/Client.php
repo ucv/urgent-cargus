@@ -10,7 +10,7 @@ class Client
     /**
      * Library version
      */
-    const VERSION = '0.3';
+    const VERSION = '0.4';
 
     /**
      * Default API Uri
