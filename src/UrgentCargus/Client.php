@@ -8,7 +8,7 @@ class Client
     /**
      * Library version
      */
-    const VERSION = '0.2';
+    const VERSION = '0.3';
 
     /**
      * Default API Uri
