@@ -143,8 +143,8 @@ class Client
     /**
      * Get token from service
      *
-     * @param $username
-     * @param $password
+     * @param string $username
+     * @param string $password
      * @return string
      */
     public function getToken($username, $password)
