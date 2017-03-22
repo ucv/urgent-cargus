@@ -2,8 +2,6 @@
 namespace MNIB\UrgentCargus;
 
 use GuzzleHttp\Client as HttpClient;
-use GuzzleHttp\HandlerStack;
-use MNIB\UrgentCargus\Guzzle\MiddlewareFactory;
 
 class Client
 {
@@ -51,11 +49,7 @@ class Client
         $this->apiKey = $apiKey;
         $this->apiUri = $apiUri ?: self::API_URI;
 
-        $stack = HandlerStack::create();
-        $stack->push(MiddlewareFactory::retry());
-
         $this->httpClient = new HttpClient([
-            'handler' => $stack,
             'base_uri' => $this->apiUri,
             'timeout' => 10,
             'allow_redirects' => false,
