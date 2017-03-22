@@ -2,6 +2,8 @@
 namespace MNIB\UrgentCargus;
 
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\ClientException;
+use MNIB\UrgentCargus\Exception\HandleClientException;
 
 class Client
 {
@@ -80,10 +82,14 @@ class Client
             $headers['Authorization'] = 'Bearer ' . $token;
         }
 
-        $response = $this->httpClient->request($method, $endpoint, [
-            'headers' => $headers,
-            'json' => $params,
-        ]);
+        try {
+            $response = $this->httpClient->request($method, $endpoint, [
+                'headers' => $headers,
+                'json' => $params,
+            ]);
+        } catch (ClientException $exception) {
+            throw new HandleClientException($exception);
+        }
 
         return json_decode($response->getBody()->getContents(), true);
     }
