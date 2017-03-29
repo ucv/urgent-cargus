@@ -11,7 +11,7 @@ class HandleClientException extends \RuntimeException
         $message = $exception->getMessage();
 
         if ($result = json_decode($exception->getResponse()->getBody())) {
-            $message = isset($result->message) && $result->message ? $result->message : $message;
+            $message = isset($result->Error) && $result->Error ? $result->Error : $message;
         }
 
         parent::__construct($message, $code);
