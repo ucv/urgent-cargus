@@ -2,8 +2,8 @@
 namespace MNIB\UrgentCargus;
 
 use GuzzleHttp\Client as HttpClient;
-use GuzzleHttp\Exception\ClientException;
-use MNIB\UrgentCargus\Exception\HandleClientException;
+use GuzzleHttp\Exception\ClientException as GuzzleClientException;
+use MNIB\UrgentCargus\Exception\ClientException as UrgentCargusClientException;
 
 class Client
 {
@@ -87,8 +87,8 @@ class Client
                 'headers' => $headers,
                 'json' => $params,
             ]);
-        } catch (ClientException $exception) {
-            throw new HandleClientException($exception);
+        } catch (GuzzleClientException $exception) {
+            throw UrgentCargusClientException::fromException($exception);
         }
 
         return json_decode($response->getBody()->getContents(), true);
