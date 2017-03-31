@@ -39,8 +39,8 @@ class Client
     /**
      * Set subscription key and uri for the UrgentCargus API
      *
-     * @param $apiKey
-     * @param $apiUri
+     * @param string $apiKey
+     * @param string $apiUri
      */
     public function __construct($apiKey, $apiUri = null)
     {
