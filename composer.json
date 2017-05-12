@@ -1,13 +1,16 @@
 {
-  "name": "mnib/urgentcargus-php",
-  "type": "library",
-  "require": {
-    "php": "^5.5|^7.0",
-    "guzzlehttp/guzzle": "^6.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "MNIB\\UrgentCargus\\": "src/UrgentCargus/"
+    "name": "mnib/urgentcargus-php",
+    "description": "PHP Wrapper for the UrgentCargus API",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^5.5|^7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MNIB\\UrgentCargus\\": "src/"
+        }
     }
-  }
 }
