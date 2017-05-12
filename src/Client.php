@@ -57,7 +57,8 @@ class Client
             'allow_redirects' => false,
             'headers' => [
                 'User-Agent' => 'UrgentCargusAPI-PHP (Version ' . self::VERSION . ')',
-                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+                'Accept-Charset' => 'utf-8',
             ]
         ]);
     }
