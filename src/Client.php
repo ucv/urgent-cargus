@@ -10,7 +10,7 @@ class Client
     /**
      * Library version
      */
-    const VERSION = '0.7';
+    const VERSION = '0.8';
 
     /**
      * Default API Uri
@@ -18,16 +18,12 @@ class Client
     const API_URI = 'https://urgentcargus.azure-api.net/api/';
 
     /**
-     * Subscription Key
-     *
-     * @var string
+     * @var string Subscription Key
      */
     private $apiKey;
 
     /**
-     * Api Uri
-     *
-     * @var string
+     * @var string Api Uri
      */
     private $apiUri;
 
@@ -75,7 +71,6 @@ class Client
     public function request($method, $endpoint, array $params = [], $token = null)
     {
         $headers = [
-            'Content-Type' => 'application/json',
             'Ocp-Apim-Trace' => 'true',
             'Ocp-Apim-Subscription-Key' => $this->apiKey,
         ];
