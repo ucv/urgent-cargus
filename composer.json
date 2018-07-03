@@ -1,16 +1,23 @@
 {
-    "name": "mnib/urgentcargus-php",
-    "description": "PHP Wrapper for the UrgentCargus API",
+    "name": "ucv/urgentcargus-php",
     "type": "library",
-    "license": "MIT",
+    "description": "PHP Wrapper for the UrgentCargus API",
     "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Cristian Valentin Ungureanu",
+            "email": "valentin.ungureanu@wisesys.ro"
+        },
+        {
+            "name": "Bogdan"
+        }
+    ],
     "require": {
-        "php": "^5.5|^7.0",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "psr-4": {
-            "MNIB\\UrgentCargus\\": "src/"
+            "UCV\\UrgentCargus\\": "src/"
         }
     }
 }

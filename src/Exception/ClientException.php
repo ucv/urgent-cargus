@@ -1,5 +1,5 @@
 <?php
-namespace MNIB\UrgentCargus\Exception;
+namespace UCV\UrgentCargus\Exception;
 
 use GuzzleHttp\Exception\ClientException as GuzzleClientException;
 

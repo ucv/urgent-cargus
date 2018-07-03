@@ -1,16 +1,16 @@
 <?php
-namespace MNIB\UrgentCargus;
+namespace UCV\UrgentCargus;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\ClientException as GuzzleClientException;
-use MNIB\UrgentCargus\Exception\ClientException as UrgentCargusClientException;
+use UCV\UrgentCargus\Exception\ClientException as UrgentCargusClientException;
 
 class Client
 {
     /**
      * Library version
      */
-    const VERSION = '0.8';
+    const VERSION = '0.1';
 
     /**
      * Default API Uri
